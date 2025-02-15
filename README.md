@@ -6,6 +6,8 @@ This repository contains the code for real-time face emotion detection using lib
 
 * Regularized Xception for facial expression recognition with extra training data and step decay learning rate (https://github.com/elangarka/Regularized-Xception-FER-Extra-Training-Data-Step-Decay-Learning-Rate)
 (https://paperswithcode.com/paper/regularized-xception-for-facial-expression)
+* Distract Your Attention: Multi-head Cross Attention Network for Facial Expression Recognition (https://github.com/yaoing/dan)
+(https://paperswithcode.com/paper/distract-your-attention-multi-head-cross)
 
 
 # Usage
