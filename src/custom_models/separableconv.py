@@ -1,4 +1,3 @@
-from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import SeparableConv2D as KerasSeparableConv2D
 
 class SeparableConv2DWrapper(KerasSeparableConv2D):
