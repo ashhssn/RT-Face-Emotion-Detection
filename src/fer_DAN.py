@@ -32,6 +32,18 @@ while True:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=7)
 
+    # Calculate FPS
+    if 'prev_time' not in globals():
+        prev_time = cv2.getTickCount()
+    else:
+        current_time = cv2.getTickCount()
+        time_diff = (current_time - prev_time) / cv2.getTickFrequency()
+        fps = 1.0 / time_diff
+        prev_time = current_time
+        # Display FPS on the image
+        cv2.putText(img, f'FPS: {fps:.2f}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
+            0.9, (255, 255, 255), 2)
+
     for (x, y, w, h) in faces:
         
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
